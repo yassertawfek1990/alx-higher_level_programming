@@ -26,4 +26,3 @@ int pan(listint_t **head, listint_t *end);
 int is_palindrome(listint_t **head);
 
 #endif /* LISTS_H */
-carrie@ubuntu:0x03$
