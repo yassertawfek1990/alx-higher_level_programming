@@ -9,7 +9,7 @@ int pan(listint_t **head, listint_t *end)
 {
 	if (end == NULL)
 		return (1);
-	if (pan(head, end->next) && (*head->n == end->n))
+	if (pan(head, end->next) && (*head)->n == end->n)
 	{
 		*head = (*head)->next;
 		return (1);
