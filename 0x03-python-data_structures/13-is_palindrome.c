@@ -14,6 +14,7 @@ int pan(listint_t **head, listint_t *end)
 		*head = (*head)->next;
 		return (1);
 	}
+	return (0);
 }
 
 /**
