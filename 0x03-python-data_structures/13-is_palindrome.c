@@ -5,7 +5,7 @@
  * @head: pointer to 
  * Return: 0 if it is not
  */
-int pan(listint_t head, listint_t *head)
+int pan(listint_t **head, listint_t *end)
 {
 	if (end == NULL)
 		return (1);
