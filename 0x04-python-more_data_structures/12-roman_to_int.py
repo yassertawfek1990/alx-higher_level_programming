@@ -7,7 +7,7 @@ def roman_to_int(roman_string):
     for i in range(len(roman_string)):
         if roman_string[i] in d.keys():
             if i > 0:
-                if d[roman_string[i]] > d[roman_string[i - 1]]:
+                if d[roman_string[i]] >= d[roman_string[i - 1]]:
                     t -= d[roman_string[i]]
                     t *= -1
                 else:
