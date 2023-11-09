@@ -8,7 +8,7 @@ def roman_to_int(roman_string):
     for i in reversed(roman_string):
         n = d[i]
         if t < n * 5:
-            t +=n
+            t += n
         else:
             t -= n
-    return (t)
+    return t
