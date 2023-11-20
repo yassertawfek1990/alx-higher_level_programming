@@ -14,11 +14,10 @@ def list_division(my_list_1, my_list_2, list_length):
             print('out of range')
             continue
         except TypeError:
-            n.appemd(0)
+            n.append(0)
             print('wrong type')
             continue
         finally:
             pass
 
     return n
-
