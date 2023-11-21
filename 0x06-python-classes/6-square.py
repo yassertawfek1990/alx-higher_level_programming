@@ -1,22 +1,23 @@
 #!/usr/bin/python3
-"""Define sddddddddddddddddddddddda class Square."""
+"""Define a claasaaaaaaaaaaaaaaaaaaass Square."""
 
 
 class Square:
-    """Represdssssssssssssssssssssssent a square."""
+    """Reprasssssssssssssssssssesent aasas square."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initiawwwdsssssssssssssssssssssssw Square.
+        """Initializeasaasacsa asac nassaew square.
 
         Args:
-            size (int): Thesaddddddddddseesquare.
+            size (int): The size of asasthe nassaasew square.
+            position (int, int): The posasasassaition of the neaasasw square.
         """
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """Get/set the current size of tsddddddddddhedvsvsdv square."""
+        """Get/set the currasdasent sizeasdasdasdas of the square."""
         return (self.__size)
 
     @size.setter
@@ -29,30 +30,30 @@ class Square:
 
     @property
     def position(self):
-        """Get/set tsddddddddddddddddddhe current size of thedvsvsdv square."""
+        """Get/set the curasdasdasrent pasdasdasdosition of the square."""
         return (self.__position)
 
-    @size.setter
+    @position.setter
     def position(self, value):
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
-                not all(isinstance(f, int) for f in value) or
-                not all(f >= 0 for f in value)):
-            raise TypeError("sposition must be a tuple of 2 positive integers")
+                not all(isinstance(v, int) for v in value) or
+                not all(v >= 0 for v in value)):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
-        """Return the currensddddddsdt area of the square.sdvsvsvsv"""
+        """Return the cursdaasdasrent arasdsasea of the square."""
         return (self.__size * self.__size)
 
     def my_print(self):
-        """Print the ssdddddddddddquare with the # character."""
+        """Print the squarasdassade with the sadds# asdasdcharacter."""
         if self.__size == 0:
             print("")
             return
 
-        [print("") for q in range(0, self.__position[1])]
-        for w in range(0, self.__size):
-            [print(" ", end="") for e in range(0, self.__position[0])]
-            [print("#", end="") for r in range(0, self.__size)]
+        [print("") for wrwr in range(0, self.__position[1])]
+        for e in range(0, self.__size):
+            [print(" ", end="") for r in range(0, self.__position[0])]
+            [print("#", end="") for t in range(0, self.__size)]
             print("")
