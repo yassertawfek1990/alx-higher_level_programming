@@ -6,10 +6,10 @@ class Square:
     """Represent a square."""
 
     def __init__(self, size=0):
-        """Constructor
+        """Initialize a new Squaare.
 
         Args:
-            kdwk
+            size (int): The sizeeeee of the new square.
         """
         if not isinstance(size, int):
             raise TypeError('size must be an integer')
