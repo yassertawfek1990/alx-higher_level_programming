@@ -68,7 +68,7 @@ class SinglyLinkedList:
             n.next_node = t.next_node
             t.next_node = n
 
-    def __str__(elf):
+    def __str__(self):
         """Define"""
         s = []
         t = self.__head
