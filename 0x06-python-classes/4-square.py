@@ -15,9 +15,9 @@ class Square:
 
     @property
     def size(self):
-        """gshs"""
-        return self.__size
-    
+        """Get/set the current size of thedvsvsdv square."""
+        return (self.__size)
+
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
@@ -27,5 +27,5 @@ class Square:
         self.__size = value
 
     def area(self):
-        """deded"""
+        """Return the current area of the square.sdvsvsvsv"""
         return (self.__size * self.__size)
