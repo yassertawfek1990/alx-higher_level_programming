@@ -1,22 +1,22 @@
 #!/usr/bin/python3
-"""Define a class Square."""
+"""Define sddddddddddddddddddddddda class Square."""
 
 
 class Square:
-    """Represent a square."""
+    """Represdssssssssssssssssssssssent a square."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initiawwww Square.
+        """Initiawwwdsssssssssssssssssssssssw Square.
 
         Args:
-            size (int): Theeesquare.
+            size (int): Thesaddddddddddseesquare.
         """
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """Get/set the current size of thedvsvsdv square."""
+        """Get/set the current size of tsddddddddddhedvsvsdv square."""
         return (self.__size)
 
     @size.setter
@@ -29,29 +29,30 @@ class Square:
 
     @property
     def position(self):
-        """Get/set the current size of thedvsvsdv square."""
+        """Get/set tsddddddddddddddddddhe current size of thedvsvsdv square."""
         return (self.__position)
 
     @size.setter
     def position(self, value):
-        if (not isinstance(value, tuple)) or (value[1] < 0) or (value[0] < 0) or len(value) != 2 or (not isinstance(value[1], tuple)) or (not isinstance(value[0], int)):
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(isinstance(f, int) for f in value) or
+                not all(f >= 0 for f in value)):
             raise TypeError("sposition must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
-        """Return the current area of the square.sdvsvsvsv"""
+        """Return the currensddddddsdt area of the square.sdvsvsvsv"""
         return (self.__size * self.__size)
 
     def my_print(self):
-        """Return the current area of the square.sdvsvsvsv"""
+        """Print the ssdddddddddddquare with the # character."""
         if self.__size == 0:
             print("")
-        else:
-            for s in range(self.__position[1]):
-                print("")
-            for i in range(self.__size):
-                for x in range(self.__position[0]):
-                    print(" ", end="")
-                for m in range(self.__size):
-                    print("#", end="")
-                print("")
+            return
+
+        [print("") for q in range(0, self.__position[1])]
+        for w in range(0, self.__size):
+            [print(" ", end="") for e in range(0, self.__position[0])]
+            [print("#", end="") for r in range(0, self.__size)]
+            print("")
