@@ -65,6 +65,6 @@ class Square:
         for z in range(0, self.__size):
             [print(" ", end="") for a in range(0, self.__position[0])]
             [print("#", end="") for s in range(0, self.__size)]
-            if i != self.__size - 1:
+            if z != self.__size - 1:
                 print("")
         return ("")
