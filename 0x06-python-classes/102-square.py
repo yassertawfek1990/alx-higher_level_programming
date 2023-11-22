@@ -30,26 +30,26 @@ class Square:
         """Retursquare."""
         return (self.__size * self.__size)
 
-    def __eq1a__(self, other):
+    def __eq__(self, o):
         """Define quare."""
-        return self.area() == other.area()
+        return self.area() == o.area()
 
-    def __ne1a__(self, other):
+    def __ne__(self, o):
         """Define Square."""
-        return self.area() != other.area()
+        return self.area() != o.area()
 
-    def __lt1a__(self, other):
+    def __lt__(self, o):
         """Define Square."""
-        return self.area() < other.area()
+        return self.area() < o.area()
 
-    def __le1a__(self, other):
+    def __le__(self, o):
         """Defineare."""
-        return self.area() <= other.area()
+        return self.area() <= o.area()
 
-    def __gt1a__(self, other):
+    def __gt__(self, o):
         """DefiSquare."""
-        return self.area() > other.area()
+        return self.area() > o.area()
 
-    def __ge1a__(self, other):
+    def __ge__(self, o):
         """Definquare."""
-        return self.area() >= other.area()
+        return self.area() >= o.area()
