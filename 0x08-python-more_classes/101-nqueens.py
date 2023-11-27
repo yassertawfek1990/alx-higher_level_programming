@@ -1,5 +1,17 @@
 #!/usr/bin/python3
+"""Solves the N-queens puzzle.
 
+Determines  an NxN chessboard.
+
+Example:
+    $ ./101-nqueens.py o 4.
+
+Attributes:
+    board (list): A list ofsboard.
+    solutions (list): A lisions.
+
+Solutions are repr
+"""
 import sys
 
 
