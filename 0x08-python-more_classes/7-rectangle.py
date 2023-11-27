@@ -70,7 +70,7 @@ class Rectangle:
 
         r = []
         for b in range(self.__height):
-            [r.append('#') for k in range(self.__width)]
+            [r.append(str(self.print_symbol)) for k in range(self.__width)]
             if b != self.__height - 1:
                 r.append("\n")
         return ("".join(r))
