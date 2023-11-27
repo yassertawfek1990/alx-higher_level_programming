@@ -89,7 +89,7 @@ def rec(l, s, qu, sol):
     Returns:
         sol
     """
-    if que == len(l):
+    if qu == len(l):
         sol.append(gs(l))
         return (sol)
 
