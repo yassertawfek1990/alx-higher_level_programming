@@ -25,13 +25,13 @@ def bd(l):
 
 def gs(l):
     """Returssboard."""
-    s = []
+    sol = []
     for z in range(len(l)):
         for a in range(len(l)):
-            if board[z][a] == "Q":
-                s.append([z, a])
+            if l[z][a] == "Q":
+                sol.append([z, a])
                 break
-    return (s)
+    return (sol)
 
 
 def xo(l, s, c):
