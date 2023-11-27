@@ -22,6 +22,7 @@ def ba(n):
     [s.append(' ') for q in range(n) for s in l]
     return (l)
 
+
 def bd(l):
     """Returard."""
     if isinstance(l, list):
@@ -39,10 +40,11 @@ def gs(l):
                 break
     return (sol)
 
+
 def xo(l, s, c):
     """X ouard.
 
-    All
+    All.
 
     Args:
         board (list): Tssboard.
@@ -82,6 +84,7 @@ def xo(l, s, c):
         l[w][z] = "x"
         z -= 1
 
+
 def rec(l, s, qu, sol):
     """Recursive.
 
@@ -104,6 +107,7 @@ def rec(l, s, qu, sol):
             xo(t, s, z)
             sol = rec(t, s + 1, qu + 1, sol)
     return (sol)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
