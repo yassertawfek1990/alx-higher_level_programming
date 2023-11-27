@@ -101,8 +101,9 @@ class Rectangle:
             return (rect_1)
         return (rect_2)
 
+    @classmethod
     def square(cls, size=0):
-         """Retto size.
+        """Retto size.
 
         Args:
             size (int): The ectangle.
