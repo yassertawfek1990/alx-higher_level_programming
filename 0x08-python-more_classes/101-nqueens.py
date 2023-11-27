@@ -8,11 +8,11 @@ queen hessboard.
 import sys
 
 
-def ba(x):
+def ba(n):
     """I 0's."""
     l = []
-    [l.append([]) for q in range(x)]
-    [s.append(' ') for q in range(x) for s in l]
+    [l.append([]) for q in range(n)]
+    [s.append(' ') for q in range(n) for s in l]
     return (l)
 
 
