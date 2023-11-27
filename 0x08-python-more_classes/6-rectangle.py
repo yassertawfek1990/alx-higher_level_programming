@@ -6,7 +6,7 @@ class Rectangle:
     """Represent rectangle.
 
     Attributes:
-        number_of_instances (int): The n
+        number_of_instances (int): The n.
     """
     
     number_of_instances = 0
@@ -18,6 +18,7 @@ class Rectangle:
             width (int): The rectangle.
             height (int): The rectangle.
         """
+
         Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
