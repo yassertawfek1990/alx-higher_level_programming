@@ -10,7 +10,7 @@ Attributes:
     board (list): A list ofsboard.
     solutions (list): A lisions.
 
-Solutions are repr
+Solutions are repr.
 """
 import sys
 
