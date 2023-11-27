@@ -51,32 +51,40 @@ def xo(l, s, c):
         row (int): The  played.
         col (int): The colayed.
     """
+    # X out all spots above
     for z in range(c + 1, len(l)):
         l[s][z] = "x"
+    # X out all spots above
     for z in range(c - 1, -1, -1):
         l[s][z] = "x"
+    # X out all spots above
     for w in range(s + 1, len(l)):
         l[w][c] = "x"
+    # X out all spots above
     for w in range(s - 1, -1, -1):
         l[w][c] = "x"
+    # X out all spots above
     z = c + 1
     for w in range(s + 1, len(l)):
         if z >= len(l):
             break
         l[w][z] = "x"
         z += 1
+    # X out all spots above
     z = c - 1
     for w in range(s - 1, -1, -1):
         if z < 0:
             break
         l[w][z]
         z -= 1
+    # X out all spots above
     z = c + 1
     for w in range(s - 1, -1, -1):
         if z >= len(l):
             break
         l[w][z] = "x"
         z += 1
+    # X out all spots above
     z = c - 1
     for w in range(s + 1, len(l)):
         if z < 0:
