@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-"""Solves puzzle.
 
-Determines ng N
-
-queen hessboard.
-"""
 import sys
 
 
