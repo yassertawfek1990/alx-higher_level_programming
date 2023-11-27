@@ -48,34 +48,34 @@ def xo(l, s, c):
         l[s][z] = "x"
     for z in range(c - 1, -1, -1):
         l[s][z] = "x"
-    for z in range(s + 1, len(l)):
-        l[z][c] = "x"
-    for x in range(s - 1, -1, -1):
-        l[x][c] = "x"
+    for w in range(s + 1, len(l)):
+        l[w][c] = "x"
+    for w in range(s - 1, -1, -1):
+        l[w][c] = "x"
     z = c + 1
     for w in range(s + 1, len(l)):
-        if w >= len(l):
+        if z >= len(l):
             break
         l[w][z] = "x"
         z += 1
-    z = z - 1
+    z = c - 1
     for w in range(s - 1, -1, -1):
         if z < 0:
             break
-        l[w][x]
-        x -= 1
-    x = s + 1
+        l[w][z]
+        z -= 1
+    z = c + 1
     for w in range(s - 1, -1, -1):
-        if x >= len(l):
+        if z >= len(l):
             break
-        l[w][x] = "x"
-        x += 1
-    x = c - 1
+        l[w][z] = "x"
+        z += 1
+    z = c - 1
     for w in range(s + 1, len(l)):
-        if x < 0:
+        if z < 0:
             break
-        l[w][x] = "x"
-        x -= 1
+        l[w][z] = "x"
+        z -= 1
 
 
 def rec(l, s, qu, sol):
@@ -93,11 +93,11 @@ def rec(l, s, qu, sol):
         sol.append(gs(l))
         return (sol)
 
-    for x in range(len(l)):
-        if l[s][x] == " ":
+    for z in range(len(l)):
+        if l[s][z] == " ":
             t = bd(l)
-            t[s][x] = "Q"
-            xo(t, s, x)
+            t[s][z] = "Q"
+            xo(t, s, z)
             sol = rec(t, s + 1, qu + 1, sol)
     return (sol)
 
