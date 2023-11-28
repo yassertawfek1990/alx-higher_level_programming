@@ -1,0 +1,135 @@
+``5-text_indentation``
+**********************
+
+``text_indentation``
+********************
+
+Import m:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test:
+    >>> text_indentation("Hello Holberton")
+    Hello Holberton
+
+Test:
+    >>> text_indentation("Holberton          ")
+    Holberton
+
+Test:
+    >>> text_indentation("        Holberton")
+    Holberton
+    
+Test:
+    >>> text_indentation("        Holberton          ")
+    Holberton
+    
+Test:
+    >>> text_indentation("")
+
+Test:
+    >>> text_indentation("      ")
+
+Test:
+    >>> text_indentation("Hello: Holberton")
+    Hello:
+    <BLANKLINE>
+    Holberton
+
+Test:
+    >>> text_indentation("      ?:  :  ")
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test:
+    >>> text_indentation("\n")
+    <BLANKLINE>
+
+Test:
+    >>> text_indentation("\n\n")
+    <BLANKLINE>
+    <BLANKLINE>
+
+Test:
+    >>> text_indentation("Hello\n\n")
+    Hello
+    <BLANKLINE>
+
+Test:
+    >>> text_indentation("Hello: Holberton? school. fooo")
+    Hello:
+    <BLANKLINE>
+    Holberton?
+    <BLANKLINE>
+    school.
+    <BLANKLINE>
+    fooo
+
+Test:
+    >>> text_indentation("Hello   :     Holberton    ?    school.    fooo")
+    Hello:
+    <BLANKLINE>
+    Holberton?
+    <BLANKLINE>
+    school.
+    <BLANKLINE>
+    fooo
+
+Test:
+    >>> text_indentation("Hello   :     Holberton    ?    school.    fooo     ")
+    Hello:
+    <BLANKLINE>
+    Holberton?
+    <BLANKLINE>
+    school.
+    <BLANKLINE>
+    fooo
+
+Test:
+    >>> text_indentation(".?:")
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test:
+    >>> text_indentation("     ?   ")
+    ?
+    <BLANKLINE>
+
+Test:
+    >>> text_indentation("?Hello.")
+    ?
+    <BLANKLINE>
+    Hello.
+    <BLANKLINE>
+
+Test:
+    >>> text_indentation("?\n\n.\n\n:")
+    ?
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Test:
+    >>> text_indentation(33)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
