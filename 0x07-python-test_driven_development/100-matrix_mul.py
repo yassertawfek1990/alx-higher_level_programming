@@ -65,3 +65,7 @@ def matrix_mul(m_a, m_b):
         nm.append(nr)
 
     return nm
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/100-matrix_mul.txt")
