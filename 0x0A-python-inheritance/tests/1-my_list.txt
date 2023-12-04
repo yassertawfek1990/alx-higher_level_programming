@@ -1,46 +1,163 @@
->>> MyList = __import__('1-my_list').MyList
->>> my_list = MyList([10, 40, 20, 30, 50])
+***********************
+How to Uslist.py
+***********************
 
->>> print(my_list)
-[10, 40, 20, 30, 50]
+Tlass ``MyList`` ts from ``list``.
 
->>> my_list.print_sorted()
-[10, 20, 30, 40, 50]
+Instantiation
+*************
 
->>> print(my_list)
-[10, 40, 20, 30, 50]
+``MyList`
+an empty list:
 
->>> my_list = MyList()
->>> print(my_list)
-[]
+==
 
->>> my_list.append(1)
->>> print(my_list)
-[1]
+    >>> MyList = __import__('1-my_list').MyList
+    >>> my_list = MyList()
+    >>> type(my_list)
+    <class '1-my_list.MyList'>
 
->>> my_list.append([1])
->>> print(my_list)
-[1, [1]]
+==
 
->>> print(my_list[0])
-1
+    >>> print(my_list)
+    []
+h must be an iterable object.
 
->>> print(my_list[-1])
-[1]
+==
 
->>> my_list.print_sorted() #doctest: +IGNORE_EXCEPTION_DETAIL
-Traceback (most recent call last):
-   ...
-TypeError:
+    >>> my_list = MyList([1, 2, 3])
+    >>> print(my_list)
+    [1, 2, 3]
 
->>> my_list = MyList([-10, -90, 100, 350, 0])
->>> my_list.print_sorted()
-[-90, -10, 0, 100, 350]
+==
 
->>> my_list = MyList(['l', 'b', '4', ':'])
->>> my_list.print_sorted()
-['3', ':', 'b', 'l']
+    >>> my_list = MyList(None)
+    Traceback (most recent call last):
+    TypeError: 'NoneType' object is not iterable
 
->>> my_list = MyList([0.2, 10, -2, 4.35])
->>> my_list.print_sorted()
-[-2, 0.2, 4.35, 10]
+
+A ``TypeError`` n one instantiation arguments.
+
+==
+
+    >>> my_list = MyList([1, 2], [3, 4])
+    Traceback (most recent call last):
+    TypeError: list() takes at most 1 argument (2 given)
+
+Usage
+*****
+
+``MyList`` instance, elements can be added to a ``MyList`` with the ``append()`` method.
+
+==
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> print(my_list)
+    [1, 2, 3]
+
+Replaced exing:
+
+==
+
+    >>> my_list[0] = 5
+    >>> print(my_list)
+    [5, 2, 3]
+
+And rethod.
+
+==
+
+    >>> my_list.remove(5)
+    >>> print(my_list)
+    [2, 3]
+
+See tmore built-in methods.
+
+``print_sorted`` Method
+***********************
+
+``MyList`` implelic instance method
+``print_sorted(self)``.
+
+==
+
+    >>> my_list = MyList()
+    >>> print(my_list.print_sorted)
+    <bound method MyList.print_sorted of []>
+
+The meo arguments - a Typovided.
+
+==
+
+    >>> my_list.print_sorted(1)
+    Traceback (most recent call last):
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+The nding sorted order.
+
+==
+
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+==
+
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+ered after a call to the method.
+
+==
+
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Note thatraphically.
+
+==
+
+    >>> my_list = MyList()
+    >>> my_list.append("Brnnn")
+    >>> my_list.append("Pppy")
+    >>> my_list.append("Schl")
+    >>> my_list.append("Hlbrtn")
+    >>> my_list.append("Btty")
+    >>> print(my_list)
+    ['Brnnn', 'Pppy', 'Schl', 'Hlbrtn', 'Btty']
+
+==
+
+    >>> my_list.print_sorted()
+    ['Btty', 'Brnnn', 'Hlbrtn', 'Pppy', 'Schl']
+
+Anothelist is unaltered :)
+
+==
+
+    >>> print(my_list)
+    ['Brnnn', 'Pppy', 'Schl', 'Hlbrtn', 'Btty']
+
+Not.
+
+==
+
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+If ``print_sortll be raised.
+
+==
+
+    >>> my_list = MyList([1, "Betty", "Holberton", 5])
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    TypeError: unorderable types: str() < int()
