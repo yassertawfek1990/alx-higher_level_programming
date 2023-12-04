@@ -12,9 +12,9 @@ class Square(Rectangle):
         super().__init__(size, size)
 
     def area(self):
-        """gsgc dgrg"""
+        '''Methoeaare.'''
         return self.__size ** 2
 
     def __str__(self):
-        """hdf jjals"""
-        return "[Square]" + str(self.__size) + "/" + str(self.__size)
+        '''Retur square.'''
+        return "[Square] " + str(self.__size) + "/" + str(self.__size)
