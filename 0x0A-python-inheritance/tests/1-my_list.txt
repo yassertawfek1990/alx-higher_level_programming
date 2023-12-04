@@ -1,0 +1,45 @@
+>>> my_list = MyList([10, 40, 20, 30, 50])
+
+>>> print(my_list)
+[10, 40, 20, 30, 50]
+
+>>> my_list.print_sorted()
+[10, 20, 30, 40, 50]
+
+>>> print(my_list)
+[10, 40, 20, 30, 50]
+
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+
+>>> my_list.append(1)
+>>> print(my_list)
+[1]
+
+>>> my_list.append([1])
+>>> print(my_list)
+[1, [1]]
+
+>>> print(my_list[0])
+1
+
+>>> print(my_list[-1])
+[1]
+
+>>> my_list.print_sorted() #doctest: +IGNORE_EXCEPTION_DETAIL
+Traceback (most recent call last):
+   ...
+TypeError:
+
+>>> my_list = MyList([-10, -90, 100, 350, 0])
+>>> my_list.print_sorted()
+[-90, -10, 0, 100, 350]
+
+>>> my_list = MyList(['l', 'b', '4', ':'])
+>>> my_list.print_sorted()
+['3', ':', 'b', 'l']
+
+>>> my_list = MyList([0.2, 10, -2, 4.35])
+>>> my_list.print_sorted()
+[-2, 0.2, 4.35, 10]
