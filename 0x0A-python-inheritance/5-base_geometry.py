@@ -2,5 +2,5 @@
 """Define ska"""
 
 
-class BaseGeometry():
+class BaseGeometry:
     pass
