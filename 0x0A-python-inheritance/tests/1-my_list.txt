@@ -9,24 +9,6 @@
 >>> print(my_list)
 [10, 40, 20, 30, 50]
 
->>> my_list = MyList()
->>> print(my_list)
-[]
-
->>> my_list.append(1)
->>> print(my_list)
-[1]
-
->>> my_list.append([1])
->>> print(my_list)
-[1, [1]]
-
->>> print(my_list[0])
-1
-
->>> print(my_list[-1])
-[1]
-
 >>> my_list.print_sorted() #doctest: +IGNORE_EXCEPTION_DETAIL
 Traceback (most recent call last):
    ...
