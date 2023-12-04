@@ -12,10 +12,10 @@ class Rectangle(BaseGeometry):
         self.integer_validator("height", height)
         self.__height = height
 
-     def area(self):
-        """Return f the rtangle."""
+    def area(self):
+        '''area of rectangle.'''
         return self.__width * self.__height
 
     def __str__(self):
-        """Return dvsv sf"""
+        '''Stringon method.'''
         return "[Rectangle] " + str(self.__width) + "/" + str(self.__height)
