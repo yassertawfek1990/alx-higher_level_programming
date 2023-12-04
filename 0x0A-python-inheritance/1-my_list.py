@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Define"""
+"""Defines anyList."""
 
 
 class MyList(list):
-    """Print a"""
+    """Implemlass."""
 
     def print_sorted(self):
-        """Print a"""
+        """Print a lis"""
         print(sorted(self))
