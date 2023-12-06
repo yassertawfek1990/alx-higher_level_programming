@@ -17,23 +17,23 @@ if __name__ == "__main__":
     c = 0
 
     try:
-        for l in sys.stdin:
+        for line in sys.stdin:
             if c == 10:
                 tats(si, st)
                 c = 1
             else:
                 c += 1
-            l = l.split()
+            line = line.split()
             try:
-                si += int(l[-1])
+                si += int(line[-1])
             except (IndexError, ValueError):
                 pass
             try:
-                if l[-2] in va:
-                    if st.get(l[-2], -1) == -1:
-                        st[l[-2]] = 1
+                if line[-2] in va:
+                    if st.get(line[-2], -1) == -1:
+                        st[line[-2]] = 1
                     else:
-                        st[l[-2]] += 1
+                        st[line[-2]] += 1
             except IndexError:
                 pass
         tats(si, st)
