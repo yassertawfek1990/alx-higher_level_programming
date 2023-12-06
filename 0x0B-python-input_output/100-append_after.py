@@ -4,6 +4,7 @@
 
 def append_after(filename="", search_string="", new_string=""):
     """Insert te"""
+
     xt = ""
 
     with open(filename) as q:
@@ -11,6 +12,5 @@ def append_after(filename="", search_string="", new_string=""):
             xt += l
             if search_string in l:
                 xt += new_string
-
     with open(filename, "w") as z:
         z.write(xt)
