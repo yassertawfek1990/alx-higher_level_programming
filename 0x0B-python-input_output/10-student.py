@@ -14,4 +14,5 @@ class Student:
         if (type(attrs) == list and
                 all(type(e) == str for e in attrs)):
             return {km: getattr(self, km) for km in attrs if hasattr(self, km)}
+
         return self.__dict__
