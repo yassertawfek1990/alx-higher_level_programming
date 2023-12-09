@@ -65,3 +65,19 @@ class Rectangle(Base):
         """area"""
         return self.height * self.width
 
+    def display(self):
+        """sdSD"""
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+        for x in range(self.y):
+            print("")
+        for a in range(self.height):
+            for t in range(self.x):
+                print(" ", end="")
+            for b in range(self.width):
+                print("#", end="")
+            print("")
+    def __str__(self):
+        """Re and str() rep"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
