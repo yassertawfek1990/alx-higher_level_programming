@@ -78,6 +78,29 @@ class Rectangle(Base):
             for b in range(self.width):
                 print("#", end="")
             print("")
+
     def __str__(self):
         """Re and str() rep"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+
+    def _update_(self,id=None,height=None,width=None,y=None,x=None):
+        """Update"""
+        if id != None:
+            self.id = id
+        if width != None:
+            self.width = width
+        if height != None:
+            self.height = height
+        if x != None:
+            self.x = x
+        if y != None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        """asd fdf"""
+        if args:
+            self._update_(self, *args)
+        elif kwargs:
+            self._update_(self, **kwargs)
+
+
