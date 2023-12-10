@@ -103,4 +103,6 @@ class Rectangle(Base):
         elif kwargs:
             self._update_(self, **kwargs)
 
-
+    def to_dictionary(self):
+        """dvdv d"""
+        return {"id": self.id, "width": self.__width, "height": self.__height, "x": self.__x, "y": self.__y}

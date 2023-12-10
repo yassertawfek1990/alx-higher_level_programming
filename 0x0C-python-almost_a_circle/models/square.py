@@ -37,3 +37,7 @@ def Square(Rectangle):
             self._update_(self, *args)
         elif kwargs:
             self._update_(self, **kwargs)
+
+    def to_dictionary(self):
+        """sdd fsds"""
+        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
