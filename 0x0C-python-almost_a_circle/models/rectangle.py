@@ -4,10 +4,9 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    '''A Recss.'''
+    """csdcdv"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''Cotor.'''
         super().__init__(id)
         self.width = width
         self.height = height
@@ -16,40 +15,48 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        '''Wid otangle.'''
         return self.__width
 
-    @width.setter
+    @width.getter
     def width(self, v):
-        self.validate_integer("width", v, False)
+        if not isinstance(v, int):
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
         self.__width = v
 
     @property
     def height(self):
-        '''Hei ectangle.'''
         return self.__height
 
-    @height.setter
+    @height.getter
     def height(self, v):
-        self.validate_integer("height", v, False)
+        if not isinstance(v, int):
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
         self.__height = v
 
     @property
-    def x(self):
-        '''x tangle.'''
-        return self.__x
-
-    @x.setter
-    def x(self, v):
-        self.validate_integer("x", v)
-        self.__x = v
-
-    @property
     def y(self):
-        '''yof tngle.'''
         return self.__y
 
-    @y.setter
+    @y.getter
     def y(self, v):
-        self.validate_integer("y", v)
+        if not isinstance(v, int):
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
         self.__y = v
+
+    @property
+    def x(self):
+        return self.__x
+
+    @x.getter
+    def x(self, v):
+        if not isinstance(v, int):
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("y must be >= 0")
+        self.__x = v
