@@ -4,59 +4,64 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """csdcdv"""
+    """Rent angle."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id)
+        """Initialize a nd"""
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
+        """Setet tngle."""
         return self.__width
 
-    @width.getter
-    def width(self, v):
-        if not isinstance(v, int):
+    @width.setter
+    def width(self, b):
+        if type(b) != int:
             raise TypeError("width must be an integer")
-        if width <= 0:
+        if b <= 0:
             raise ValueError("width must be > 0")
-        self.__width = v
+        self.__width = b
 
     @property
     def height(self):
+        """St hRectangle."""
         return self.__height
 
-    @height.getter
-    def height(self, v):
-        if not isinstance(v, int):
+    @height.setter
+    def height(self, b):
+        if type(b) != int:
             raise TypeError("height must be an integer")
-        if height <= 0:
+        if b <= 0:
             raise ValueError("height must be > 0")
-        self.__height = v
-
-    @property
-    def y(self):
-        return self.__y
-
-    @y.getter
-    def y(self, v):
-        if not isinstance(v, int):
-            raise TypeError("y must be an integer")
-        if y < 0:
-            raise ValueError("y must be >= 0")
-        self.__y = v
+        self.__height = b
 
     @property
     def x(self):
+        """Se theectangle."""
         return self.__x
 
-    @x.getter
-    def x(self, v):
-        if not isinstance(v, int):
+    @x.setter
+    def x(self, b):
+        if type(b) != int:
             raise TypeError("x must be an integer")
-        if x < 0:
+        if b < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = b
+
+    @property
+    def y(self):
+        """Sehe ctangle."""
+        return self.__y
+
+    @y.setter
+    def y(self, b):
+        if type(b) != int:
+            raise TypeError("y must be an integer")
+        if b < 0:
             raise ValueError("y must be >= 0")
-        self.__x = v
+        self.__y = b
