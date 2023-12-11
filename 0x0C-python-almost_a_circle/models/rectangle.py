@@ -71,15 +71,8 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """sdSD"""
-        if self.width == 0 or self.height == 0:
-            print("")
-            return
-        for x in range(self.y):
-            print("")
-        for a in range(self.height):
-            for t in range(self.x):
-                print(" ", end="")
-            for b in range(self.width):
-                print("#", end="")
-            print("")
+        '''Printangle.'''
+        s = '\n' * self.y + \
+            (' ' * self.x + '#' * self.width + '\n') * self.height
+
+        print(s, end='')
