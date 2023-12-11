@@ -67,19 +67,14 @@ class Rectangle(Base):
         self.__y = b
 
     def area(self):
-        """area"""
-        return self.height * self.width
+        '''Comput this'''
+        return self.width * self.height
 
     def display(self):
-        """sdSD"""
-        if self.width == 0 or self.height == 0:
-            print("")
-            return
-        for x in range(self.y):
-            print("")
-        for a in range(self.height):
-            for t in range(self.x):
-                print(" ", end="")
-            for b in range(self.width):
-                print("#", end="")
-            print("")
+        '''Pints strinectangle.'''
+        ghghgh = '\n' * self.y + (' ' * self.x + '#' * self.width + '\n') * self.height
+        print(ghghgh, end='')
+
+    def __str__(self):
+        '''Ret infoa'''
+        return '[{}] ({}) {}/{} - {}/{}'.format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
