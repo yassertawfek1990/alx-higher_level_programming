@@ -102,3 +102,8 @@ class Rectangle(Base):
             self.__update__(*args)
         elif kwargs:
             self.__update__(**kwargs)
+
+    def to_dictionary(self):
+        '''Rurns dict.'''
+        return {"id": self.id, "width": self.__width, "height": self.__height,
+                "x": self.__x, "y": self.__y}
