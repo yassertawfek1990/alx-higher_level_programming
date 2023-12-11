@@ -1,43 +1,26 @@
 #!/usr/bin/python3
-"""define dd"""
+'''Modle class.'''
+from models.rectangle import Rectangle
 
 
-def Square(Rectangle):
-    """Square Rectangle"""
+class Square(Rectangle):
+    '''Aare class.'''
+
     def __init__(self, size, x=0, y=0, id=None):
-        Super().__init__(size, size, x, y, id)
+        '''Cructor.'''
+        super().__init__(size, size, x, y, id)
 
-     def __str__(self):
-        """Re and str() rep"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+    def __str__(self):
+        '''Retu uare.'''
+        return '[{}] ({}) {}/{} - {}'.\
+            format(type(self).__name__, self.id, self.x, self.y, self.width)
 
     @property
     def size(self):
+        '''Si re.'''
         return self.width
 
-    @size.getter
-    def size(self, v):
-        self.width = v
-        self.height = v
-
-     def _update_(self,id=None,size=None,y=None,x=None):
-        """Update"""
-        if id != None:
-            self.id = id
-        if width != None:
-            self.size = size
-        if x != None:
-            self.x = x
-        if y != None:
-            self.y = y
-
-    def update(self, *args, **kwargs):
-        """asd fdf"""
-        if args:
-            self._update_(self, *args)
-        elif kwargs:
-            self._update_(self, **kwargs)
-
-    def to_dictionary(self):
-        """sdd fsds"""
-        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
+    @size.setter
+    def size(self, b):
+        self.width = b
+        self.height = b
