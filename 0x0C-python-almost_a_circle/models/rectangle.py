@@ -69,12 +69,3 @@ class Rectangle(Base):
     def area(self):
         '''Comput this'''
         return self.width * self.height
-
-    def display(self):
-        '''Pints strinectangle.'''
-        ghghgh = '\n' * self.y + (' ' * self.x + '#' * self.width + '\n') * self.height
-        print(ghghgh, end='')
-
-    def __str__(self):
-        '''Ret infoa'''
-        return '[{}] ({}) {}/{} - {}/{}'.format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
