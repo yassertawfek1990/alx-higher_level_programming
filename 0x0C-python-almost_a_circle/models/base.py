@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """define dd"""
 import json
+import csv
 
 
 class Base:
@@ -61,3 +62,32 @@ class Base:
         with open(f, "r") as x:
             return (cls.create(**m) for m in cls.from_json_string(x.read()))
 
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """vsdvsd sdvsv"""
+        from models.square import Square
+        from models.rectangle import Rectangle
+        if list_objs is not None:
+            if cls is Rectangle:
+                l = [q.id, q.width, q.height, q.x, q.y for q in list_objs]
+            else:
+                l = [q.id, q.size, q.x, q.y for q in list_objs]
+        with open("{}.csv".format(cls.__name__), "w",newline="") as fi:
+            w =csv.writer(fi)
+            w.writerows(l)
+    @classmethod
+    def load_from_file_csv(cls):
+        """sdc sdvsdv"""
+        from models.square import Square
+        from models.rectangle import Rectangle
+        with open("{}.csv".format(cls.__name__), "r",newline="") as fi:
+            l = []
+            r = csv.reader(fi)
+            for s in r:
+                s =[int(x) for x in r]
+                if cls is Rectangle:
+                    k = ["id": r[0], "width": r[1], "height": r[2], "x": r[3], "y": r[4]]
+                else:
+                     k = ["id": r[0], "size": r[1], "x": r[2], "y": r[3]]
+                l.append(cls.create(**k))
+        return l
