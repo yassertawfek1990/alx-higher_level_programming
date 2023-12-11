@@ -65,3 +65,21 @@ class Rectangle(Base):
         if b < 0:
             raise ValueError("y must be >= 0")
         self.__y = b
+
+    def area(self):
+        """area"""
+        return self.height * self.width
+
+    def display(self):
+        """sdSD"""
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+        for x in range(self.y):
+            print("")
+        for a in range(self.height):
+            for t in range(self.x):
+                print(" ", end="")
+            for b in range(self.width):
+                print("#", end="")
+            print("")
