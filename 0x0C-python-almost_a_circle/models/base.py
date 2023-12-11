@@ -71,7 +71,7 @@ class Base:
         from models.square import Square
         if list_objs is not None:
             if cls is Rectangle:
-                list_objs = [[e.id, e.width, e.height, 
+                list_objs = [[e.id, e.width, e.height,
                     e.x, e.y] for e in list_objs]
             else:
                 list_objs = [[e.id, e.size, e.x, e.y] for e in list_objs]
@@ -96,4 +96,3 @@ class Base:
                     k = {"id": r[0], "size": r[1], "x": r[2], "y": r[3]}
                 m.append(cls.create(**k))
         return m
-
