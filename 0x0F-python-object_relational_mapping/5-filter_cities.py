@@ -1,10 +1,18 @@
-#!/usr/bin/node
-const Rectangle = require('./4-rectangle');
+#!/usr/bin/python3
+"""  lin_0e_0_usa """
+import MySQLdb
+import sys
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-}
 
-module.exports = Square;
+if __name__ == "__main__":
+    zx = MySQLdb.connect(host="localhost", user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3], port=3306)
+    cr = zx.cursor()
+    cr.execute("""SELECT cities.name FROM
+                cities INNER JOIN states ON states.id=cities.state_id
+                WHERE states.name=%s""", (sys.argv[4],))
+    r = cr.fetchall()
+    ap = list(x[0] for x in r)
+    print(*ap, sep=", ")
+    cr.close()
+    zx.close()
