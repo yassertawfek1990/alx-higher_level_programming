@@ -16,7 +16,7 @@ if __name__ == '__main__':
     ss = Sn()
     ns = State(name='California')
     nc = City(name='San Francisco')
-    ns.cities.append(newCity)
+    ns.cities.append(nc)
     ss.add(ns)
     ss.add(nc)
     ss.commit()
