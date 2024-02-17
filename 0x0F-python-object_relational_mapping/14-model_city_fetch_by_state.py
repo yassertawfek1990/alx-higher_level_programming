@@ -14,5 +14,5 @@ if __name__ == "__main__":
     Sn = sessionmaker(bind=ge)
     ss = Sn()
     for i in (ss.query(State.name, City.id, City.name)
-                     .filter(State.id == City.state_id)):
+              .filter(State.id == City.state_id)):
         print(i[0] + ": (" + str(i[1]) + ") " + i[2])
