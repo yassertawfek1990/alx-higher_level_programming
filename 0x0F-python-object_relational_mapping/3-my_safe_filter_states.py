@@ -8,8 +8,8 @@ if __name__ == "__main__":
     zx = MySQLdb.connect(host="localhost", user=sys.argv[1],
                          passwd=sys.argv[2], db=sys.argv[3], port=3306)
     cr = db.cursor()
-    mch = sys.argv[4]
-    cr.execute("SELECT * FROM states WHERE name LIKE %s", (mch, ))
+    match = sys.argv[4]
+    cr.execute("SELECT * FROM states WHERE name LIKE %s", (match, ))
     r = cur.fetchall()
     for x in r:
         print(x)
