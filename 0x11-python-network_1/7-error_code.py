@@ -9,6 +9,6 @@ if __name__ == '__main__':
     url = argv[1]
 
     s = get(url)
-    X = 'Error code: {}'
+    ERR_TXT = 'Error code: {}'
     t = response.status_code
-    print(X.format(t) if (t >= 400) else s.text)
+    print(ERR_TXT.format(t) if (t >= 400) else s.text)
