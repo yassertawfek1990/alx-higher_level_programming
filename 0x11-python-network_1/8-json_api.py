@@ -13,10 +13,10 @@ if __name__ == '__main__':
     y = s.headers['content-type']
 
     if y == 'application/json':
-        l = s.json()
-        _i = l.get('id')
-        m = l.get('name')
-        if (l != {} and _i and m):
+        ll = s.json()
+        _i = ll.get('id')
+        m = ll.get('name')
+        if (ll != {} and _i and m):
             print("[{}] {}".format(_i, m))
         else:
             print('No result')
