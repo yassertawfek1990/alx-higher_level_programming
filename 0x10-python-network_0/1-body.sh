@@ -1,3 +1,3 @@
 #!/bin/bash
 # Send esponse
-curl -s -L "${1}"
+curl -s-L "$1"
