@@ -10,5 +10,5 @@ if __name__ == '__main__':
 
     s = get(url)
     ERR_TXT = 'Error code: {}'
-    t = response.status_code
+    t = s.status_code
     print(ERR_TXT.format(t) if (t >= 400) else s.text)
