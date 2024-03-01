@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-"""
+""" fver """
 import requests
 
 
