@@ -1,9 +1,7 @@
 #!/usr/bin/node
-
 const xx = require('request');
 const id = process.argv[2];
 const v = `https://swapi-api.alx-tools.com/api/films/${id}`;
-
 xx.get(v, (error, response, body) => {
   if (error) {
     console.log(error);
@@ -21,4 +19,4 @@ xx.get(v, (error, response, body) => {
       });
     }
   }
-});
+})
