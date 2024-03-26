@@ -19,4 +19,4 @@ xx.get(v, (error, response, body) => {
       });
     }
   }
-})
+});
