@@ -1,6 +1,11 @@
 #!/usr/bin/node
-const s = require('request');
-let r = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
-s(r, function (error, response, body) {
-  console.log(error || JSON.parse(body).title);
+const xx = require('request');
+const v = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
+xx.get(v, (error, response, body) => {
+  if (error) {
+    console.log(error);
+  } else {
+    const b = JSON.parse(body);
+    console.log(b.title);
+  }
 });
